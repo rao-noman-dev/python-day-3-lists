@@ -108,10 +108,15 @@ else:
     print("Ali was not found.")
 
 
-# Exercise 15 - Add, Remove, and Update Shopping Items
+# Exercise 15 - Practice append(), insert(), pop(), remove(), and update
 shopping_items = ["milk", "bread", "eggs"]
 
 shopping_items.append("tea")
+shopping_items.insert(1, "butter")
+print("After insert:", shopping_items)
+
+popped_item = shopping_items.pop()
+print("Popped item:", popped_item)
 
 if "bread" in shopping_items:
     shopping_items.remove("bread")

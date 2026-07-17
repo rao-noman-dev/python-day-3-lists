@@ -1,6 +1,18 @@
 # Day 3 Project - Shopping List Manager
 
-shopping_list = ["Milk", "Bread", "Eggs"]
+shopping_list = []
+
+print("Shopping list starts empty.")
+print("Total items:", len(shopping_list))
+
+shopping_list.append("Milk")
+shopping_list.append("Bread")
+shopping_list.append("Eggs")
+shopping_list.append("Rice")
+shopping_list.append("Tea")
+
+print("Five sample items were added using append().")
+print("Total items:", len(shopping_list))
 
 while True:
     print("\n--- Shopping List Manager ---")
@@ -25,6 +37,8 @@ while True:
                 print(number, item)
                 number += 1
 
+        print("Total items:", len(shopping_list))
+
     # Choice 2 - Add item
     elif choice == "2":
         new_item = input("Enter the name of the new item: ").strip()
@@ -32,6 +46,7 @@ while True:
         if new_item:
             shopping_list.append(new_item)
             print(new_item, "has been added successfully.")
+            print("Total items:", len(shopping_list))
         else:
             print("Item name cannot be blank.")
 
@@ -39,6 +54,7 @@ while True:
     elif choice == "3":
         if len(shopping_list) == 0:
             print("Shopping list is empty.")
+            print("Total items:", len(shopping_list))
         else:
             item_name = input("Enter the item name to remove: ").strip()
 
@@ -52,6 +68,7 @@ while True:
             if matched_item is not None:
                 shopping_list.remove(matched_item)
                 print(matched_item, "has been removed successfully.")
+                print("Total items:", len(shopping_list))
             else:
                 print("Sorry! Item does not exist in the shopping list.")
 
@@ -59,6 +76,7 @@ while True:
     elif choice == "4":
         if len(shopping_list) == 0:
             print("Shopping list is empty.")
+            print("Total items:", len(shopping_list))
         else:
             print("\nCurrent Shopping List:")
 
@@ -89,6 +107,7 @@ while True:
                             "has been updated to",
                             new_item + "."
                         )
+                        print("Total items:", len(shopping_list))
                     else:
                         print("New item name cannot be blank.")
                 else:
@@ -100,6 +119,7 @@ while True:
     # Choice 5 - Exit
     elif choice == "5":
         print("Exiting Shopping List Manager.")
+        print("Final total items:", len(shopping_list))
         break
 
     # Invalid menu choice
